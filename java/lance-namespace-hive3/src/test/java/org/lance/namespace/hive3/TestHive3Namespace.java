@@ -56,6 +56,7 @@ import static java.nio.file.attribute.PosixFilePermissions.asFileAttribute;
 import static java.nio.file.attribute.PosixFilePermissions.fromString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -126,6 +127,11 @@ public class TestHive3Namespace {
 
     nsRequest.setId(Lists.list("test_catalog", "test_db"));
     namespace.createNamespace(nsRequest);
+  }
+
+  @Test
+  public void testGetClientPool() {
+    assertSame(metastore.clientPool(), ((Hive3Namespace) namespace).getClientPool());
   }
 
   @Test
