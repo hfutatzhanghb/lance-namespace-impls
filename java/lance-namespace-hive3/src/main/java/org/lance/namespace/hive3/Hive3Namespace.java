@@ -82,7 +82,6 @@ public class Hive3Namespace implements LanceNamespace, Closeable {
     this.hadoopConf = conf;
   }
 
-  /** Returns the Hive Metastore client pool used by this namespace. */
   public Hive3ClientPool getClientPool() {
     return clientPool;
   }
