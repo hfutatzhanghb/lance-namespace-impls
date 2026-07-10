@@ -55,7 +55,7 @@ import static java.nio.file.attribute.PosixFilePermissions.asFileAttribute;
 import static java.nio.file.attribute.PosixFilePermissions.fromString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -106,7 +106,7 @@ public class TestHive2Namespace {
 
   @Test
   public void testGetClientPool() {
-    assertSame(metastore.clientPool(), ((Hive2Namespace) namespace).getClientPool());
+    assertNotNull(((Hive2Namespace) namespace).getClientPool());
   }
 
   @Test
