@@ -124,11 +124,11 @@
         <classifier>core</classifier>
       </dependency>
       
-      <!-- Use Hadoop 2 version compatible with Hive 2 - needs getPassword method support -->
+      <!-- Use Hadoop version compatible with Hive 2.3.9 - needs 2.8.x+ for getPassword method -->
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-common</artifactId>
-        <version>${hadoop2.version}</version>
+        <version>${hadoop.version}</version>
         <exclusions>
           <exclusion>
             <groupId>com.google.guava</groupId>
@@ -147,7 +147,7 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-core</artifactId>
-        <version>${hadoop2.version}</version>
+        <version>${hadoop.version}</version>
         <exclusions>
           <exclusion>
             <groupId>com.google.guava</groupId>
@@ -162,7 +162,7 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-hdfs</artifactId>
-        <version>${hadoop2.version}</version>
+        <version>${hadoop.version}</version>
         <scope>test</scope>
         <exclusions>
           <exclusion>

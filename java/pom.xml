@@ -70,7 +70,7 @@
         <assertj.version>3.26.3</assertj.version>
         <hive2.version>2.3.9</hive2.version>
         <hive3.version>3.1.3</hive3.version>
-        <hadoop2.version>2.8.5</hadoop2.version>
+        <hadoop.version>2.8.5</hadoop.version>
         <derby.version>10.14.2.0</derby.version>
         <guava.version>33.4.0-jre</guava.version>
 
