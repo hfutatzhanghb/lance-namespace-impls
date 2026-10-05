@@ -84,6 +84,10 @@ public class Hive3Namespace implements LanceNamespace, Closeable {
     this.hadoopConf = conf;
   }
 
+  public Hive3ClientPool getClientPool() {
+    return clientPool;
+  }
+
   @Override
   public void initialize(Map<String, String> configProperties, BufferAllocator allocator) {
     this.allocator = allocator;
